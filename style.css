@@ -1,0 +1,61 @@
+html, body{
+    min-height: 100%
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    background: linear-gradient(0deg, #becde2, #fff2e6 30%, #ffffe6);
+    animation: gradient 30s ease infinite;
+    background-size: 200% 200%;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #0b658f;
+    font-family: verdana;
+}
+
+svg {
+    background-color: transparent;
+}
+
+#canvas {
+    min-width: 1000px;
+    min-height: 600px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-left {
+    width: 55%;
+    height: 5em;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .flex-right {
+    width: 45%;
+    height: 5em;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  tooltip {
+    font-family: courier;
+    font-size: 20px;
+    align-items: center;
+    /* padding-top: 5px;
+    margin-top: 5px; */
+    text-align: center;
+    visibility: hidden;
+  }

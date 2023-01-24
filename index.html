@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Choropleth Map</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js'></script>
+    <link rel="stylesheet" href="./style.css"></link>
+</head>
+<body>
+    <h1 id="title">US Higher Education Map</h1>
+        
+    <svg id="canvas">
+        <text id="description" x="160" y="20" style="fill: rgb(8, 139, 165); font: bold 20px Tahoma, sans-serif; 
+            font-family: Tahoma, sans-serif;">Percentage of Adults with Bachelor's Degree or Higher (2010 - 2014)</text>
+    </svg>
+
+    <div class="flex-container">
+        <svg id='legend' class="flex-left">
+            <g>
+                <rect x="10" y="0" width="30" height="30" style="fill:tomato;stroke-width:2;stroke:rgb(0,0,0)"></rect>
+                <text x="60" y="20" fill="black">Less than 15%</text>
+            </g>
+            <g>
+                <rect x="10" y="40" width="30" height="30" style="fill:orange;stroke-width:2;stroke:rgb(0,0,0)"></rect>
+                <text x="60" y="60" fill="black">15% to 30%</text>
+            </g>
+            <g>
+                <rect x="200" y="0" width="30" height="30" style="fill:lightgreen;stroke-width:2;stroke:rgb(0,0,0)"></rect>
+                <text x="250" y="20" fill="black">30% to 45%</text>
+            </g>
+            <g>
+                <rect x="200" y="40" width="30" height="30" style="fill:limegreen;stroke-width:2;stroke:rgb(0,0,0)"></rect>
+                <text x="250" y="60" fill="black">More than 45%</text>
+            </g>
+        </svg>
+
+        <div id="tooltip" class="flex-right"></div>
+    </div>
+</body>
+    <script defer src="./script.js"></script>
+</html>
